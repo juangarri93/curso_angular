@@ -1,0 +1,48 @@
+  <table>
+      <tr>
+        <td>Operacion:</td>
+        <td>
+          <select name="singleSelect" [(ngModel)]="seleccion"  (change)="eventoClickCalcular($event)">
+              <option value="suma">suma</option>
+              <option value="resta">resta</option>
+              <option value="multiplicacion">multiplicacion</option>
+              <option value="division">division</option>
+            </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Numero 1:</td>
+        <td>
+          <input type="number" name="num1" [(ngModel)]="campoNum1"/>
+        </td>
+      </tr>
+    <tr>
+      <td>Numero 2:</td>
+      <td>
+        <input type="number" name="num2" [(ngModel)]="campoNum2"/>
+      </td>
+    </tr>
+    <tr>
+      <td>Resultado:</td>
+      <td>
+        <input type="number" name="num3" [(ngModel)]="campoTotal"/>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="eventoClickCalcular($event)">Calcular!</button>
+      </td>
+    </tr>
+  </table>
+  <br>
+  Num 1: {{campoNum1}} <br>
+  Num 2: {{campoNum2}} <br>
+  Total: {{campoTotal}} <br>
+
+  <table>
+    <tr *ngFor="let ho of historicoOperaciones">
+        <td>{{ho.operacion}}</td>
+        <td [ngStyle]="{color: ho.total < 0 ? 'red' : 'black' }">{{ho.total}}</td>
+        <td><a href="#" (click)=eventoClickBorrar($event,item)>Borrar</a></td>
+    </tr>
+  </table>

@@ -1,0 +1,72 @@
+<form novalidate [formGroup]="postForm" (ngSubmit)="eventoAltaPost($event)">
+    Id: <input type = "number" placeholder="hola id" name = "id" formControlName = "id"> <br>
+    <div *ngIf="postForm?.controls.id.valid == false && submitAttemp">
+      Falta el id
+    </div>
+    User Id: <input type = "number" name = "userId" formControlName = "userId"> <br>
+    <div *ngIf="postForm?.controls.userId.valid == false && submitAttemp">
+      Falta el User Id
+    </div>
+    Title: <input type = "text" name = "title" formControlName = "title"> <br>
+    <div *ngIf="postForm?.controls.title.valid == false && submitAttemp">
+      Falta el Title
+    </div>
+    Body: <input type = "text" name = "body" formControlName = "body"> <br>
+    <div *ngIf="postForm?.controls.body.valid == false && submitAttemp">
+      Falta el body
+    </div>
+    <button type="submit">Enviar!</button>
+</form>
+<br>
+<table>
+    <tr *ngFor="let post of actualPosts">
+        <td>{{post.id}}</td>
+        <td>{{post.userId}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.body}}</td>
+        <td>
+          <button (click)="eventoClickBuscarPost($event,post.id)">Detalle</button>
+        </td>
+        
+    </tr>
+  </table>
+
+  <h1>
+    Post Elegido: 
+  </h1>
+  <table *ngIf="postElegido">
+  <tr>
+      <td>
+Post id:     
+      </td>
+      <td>
+          {{postElegido.id}}      
+      </td>
+  </tr>
+  <tr>
+      <td>
+Post User:     
+      </td>
+      <td>
+          {{postElegido.userId}}      
+      </td>
+  </tr>
+  <tr>
+      <td>
+Post Title:     
+      </td>
+      <td>
+          {{postElegido.title}}      
+      </td>
+  </tr>
+  <tr>
+      <td>
+Post Body:     
+      </td>
+      <td>
+          {{postElegido.body}}      
+      </td>
+  </tr>
+</table>
+  
+  

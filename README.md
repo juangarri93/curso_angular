@@ -1,9 +1,11 @@
 # Set up
 
 Al bajar el proyecto abrir la consola del Node.js: 
-- pararse dentro de la carpeta del proyecto
+- pararse dentro de la carpeta del proyecto. 
+
 Ejecutar:
-- npm install  // para bajar los modules.
+- npm install  // para bajar los modules. 
+
 Depues:
 - ng serve // para buildear y levantar y listo ya queda 10 puntos.
 

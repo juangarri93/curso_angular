@@ -1,7 +1,13 @@
-# Curso
+# Set up
 
-Al bajar desde la consola del Node.js pararse dentro de la carpeta del proyecto y ejecutar npm install para bajar los modules.
-Depues ng serve para buildear y levantar y listo ya queda 10 puntos.
+Al bajar desde la consola del Node.js: 
+- pararse dentro de la carpeta del proyecto
+Ejecutar:
+- npm install  // para bajar los modules.
+Depues:
+- ng serve // para buildear y levantar y listo ya queda 10 puntos.
+
+# Curso
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 

@@ -1,6 +1,6 @@
 # Set up
 
-Al bajar desde la consola del Node.js: 
+Al bajar el proyecto abrir la consola del Node.js: 
 - pararse dentro de la carpeta del proyecto
 Ejecutar:
 - npm install  // para bajar los modules.

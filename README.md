@@ -9,6 +9,8 @@ Ejecutar:
 Depues:
 - ng serve // para buildear y levantar y listo ya queda 10 puntos.
 
+http://localhost:4200/
+
 # Curso
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
